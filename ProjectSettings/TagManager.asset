@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - FieldOfView
+  - Enemy
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - UI
   - Obstacle
   - Player
-  - 
-  - 
+  - Enemy
+  - Door
   - 
   - 
   - 
@@ -45,4 +47,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3291408447
+    locked: 0
+  - name: Enemy
+    uniqueID: 1018192809
+    locked: 0
+  - name: Door
+    uniqueID: 2540845347
     locked: 0
