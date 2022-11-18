@@ -8,6 +8,7 @@ TagManager:
   - FieldOfView
   - Enemy
   - Door
+  - EnemyWaypoints
   layers:
   - Default
   - TransparentFX
