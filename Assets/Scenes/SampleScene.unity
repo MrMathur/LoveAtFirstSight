@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6867458988535778523, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: followWaypoints
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
 --- !u!1001 &4022315609731825049
