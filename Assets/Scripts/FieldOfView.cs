@@ -59,6 +59,7 @@ public class FieldOfView : MonoBehaviour
 
         int[] triangles = new int[(rayCount - 1) * 3];
         Vector3[] vertices = new Vector3[rayCount + 1];
+        Vector2[] uv = new Vector2[rayCount + 1];
 
         vertices[0] = origin;
         for (int i = 1; i < rayCount; i++) {
@@ -84,6 +85,7 @@ public class FieldOfView : MonoBehaviour
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+        mesh.uv = uv;
 
         // Look for Enemies
         foreach (GameObject enemy in enemies) {
