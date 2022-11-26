@@ -11,26 +11,29 @@ public class FieldOfView : MonoBehaviour
     [SerializeField] private float viewAngle;
     [SerializeField] private int rayCount;
     [SerializeField] private float zOffset;
-    [SerializeField] private float timeToGameOver;
+    // [SerializeField] private float timeToGameOver;
     private bool testEnd;
-    public GameObject[] playerFOV;
+    // public GameObject[] playerFOV;
 
-    Color startCol;
-    Color endCol;
+    // Color startCol;
+    // Color endCol;
 
     private GameObject[] enemies;
-    private float endGame;
+    // private float endGame;
     private LayerMask obstacleMask;
     private Vector3 origin;
     private float startingAngle;
+
+    private GameObject player;
+    private Animator player_animator;
 
     private Camera cam;
 
     // Start is called before the first frame update
     void Start()
     {
-        startCol = new Color(141/255, 197/255, 120/255, 1.0f);
-        endCol = new Color(255/255, 204/255, 213/255, 1.0f);
+        // startCol = new Color(141/255, 197/255, 120/255, 1.0f);
+        // endCol = new Color(255/255, 204/255, 213/255, 1.0f);
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
 
@@ -38,10 +41,13 @@ public class FieldOfView : MonoBehaviour
         startingAngle = viewAngle / 2;
 
         obstacleMask = LayerMask.GetMask("Obstacle");
-        endGame = 0;
+        // endGame = 0;
         cam = Camera.main;
 
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
+        player_animator = player.GetComponent<Animator>();
     }
 
     void Update() {
@@ -96,12 +102,12 @@ public class FieldOfView : MonoBehaviour
 
         // Look for Enemies
         testEnd = false;
-        var lerpedColor = Color.Lerp(Color.green, Color.red, endGame/timeToGameOver);
-        playerFOV = GameObject.FindGameObjectsWithTag("FieldOfView");
-        var FOVRenderer = playerFOV[0].GetComponent<Renderer>();
+        // var lerpedColor = Color.Lerp(Color.green, Color.red, endGame/timeToGameOver);
+        // playerFOV = GameObject.FindGameObjectsWithTag("FieldOfView");
+        // var FOVRenderer = playerFOV[0].GetComponent<Renderer>();
 
        // Call SetColor using the shader property name "_Color" and setting the color to red
-        FOVRenderer.material.SetColor("_Color", lerpedColor);
+        // FOVRenderer.material.SetColor("_Color", lerpedColor);
 
         foreach (GameObject enemy in enemies) {
             float enemyDistance = Vector3.Distance(origin, enemy.transform.position);
@@ -113,13 +119,14 @@ public class FieldOfView : MonoBehaviour
                     enemy.GetComponent<EnemyMovement>().setSpeedZero();
                     RaycastHit2D hit = Physics2D.Raycast(origin, new Vector2(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y), viewDistance, obstacleMask);        
                     if (hit.collider == null) {
-                        endGame++;
+                        // endGame++;
                         testEnd = true;
-                        if (endGame>timeToGameOver) {
-                            enemy.GetComponent<EnemyMovement>().setSpeedBack();
-                            Scene scene = SceneManager.GetActiveScene();
-                            SceneManager.LoadScene(scene.name);
-                        }
+                        player_animator.SetBool("EnemyWithinCone", true);
+                        // if (endGame>timeToGameOver) {
+                        //     enemy.GetComponent<EnemyMovement>().setSpeedBack();
+                        //     Scene scene = SceneManager.GetActiveScene();
+                        //     SceneManager.LoadScene(scene.name);
+                        // }
                     } 
                 } else {
                     enemy.GetComponent<EnemyMovement>().setSpeedBack();
@@ -127,12 +134,12 @@ public class FieldOfView : MonoBehaviour
 
             } else {
                 enemy.GetComponent<EnemyMovement>().setSpeedBack();
-
             }
 
         }
         if (testEnd == false){
-            endGame = 0;
+            player_animator.SetBool("EnemyWithinCone", false);
+            // endGame = 0;
         }
     }
 

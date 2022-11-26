@@ -21,4 +21,9 @@ public class MenuFunctions : MonoBehaviour
     public void LoadCredits() {
         SceneManager.LoadScene(creditsIndex, LoadSceneMode.Single);
     }
+
+    public void RestartScene() {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
 }
