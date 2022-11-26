@@ -11,6 +11,12 @@ public class FieldOfView : MonoBehaviour
     [SerializeField] private float viewAngle;
     [SerializeField] private int rayCount;
     [SerializeField] private float zOffset;
+    [SerializeField] private float timeToGameOver;
+    private bool testEnd;
+    public GameObject[] playerFOV;
+
+    Color startCol;
+    Color endCol;
 
     private GameObject[] enemies;
     private float endGame;
@@ -23,6 +29,8 @@ public class FieldOfView : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startCol = new Color(141/255, 197/255, 120/255, 1.0f);
+        endCol = new Color(255/255, 204/255, 213/255, 1.0f);
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
 
@@ -87,6 +95,14 @@ public class FieldOfView : MonoBehaviour
         mesh.uv = uv;
 
         // Look for Enemies
+        testEnd = false;
+        var lerpedColor = Color.Lerp(Color.green, Color.red, endGame/timeToGameOver);
+        playerFOV = GameObject.FindGameObjectsWithTag("FieldOfView");
+        var FOVRenderer = playerFOV[0].GetComponent<Renderer>();
+
+       // Call SetColor using the shader property name "_Color" and setting the color to red
+        FOVRenderer.material.SetColor("_Color", lerpedColor);
+
         foreach (GameObject enemy in enemies) {
             float enemyDistance = Vector3.Distance(origin, enemy.transform.position);
             if (enemyDistance < viewDistance) {
@@ -94,16 +110,29 @@ public class FieldOfView : MonoBehaviour
                 Vector3 playerToEnemyDirection = new Vector3(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y, 0);
                 float enemyAngle = Vector3.Angle(playerToEnemyDirection, visionConeDirection) * Mathf.Deg2Rad;
                 if (enemyAngle < (viewAngle / 2)) {
+                    enemy.GetComponent<EnemyMovement>().setSpeedZero();
                     RaycastHit2D hit = Physics2D.Raycast(origin, new Vector2(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y), viewDistance, obstacleMask);        
                     if (hit.collider == null) {
                         endGame++;
-                        if (endGame>1000) {
+                        testEnd = true;
+                        if (endGame>timeToGameOver) {
+                            enemy.GetComponent<EnemyMovement>().setSpeedBack();
                             Scene scene = SceneManager.GetActiveScene();
                             SceneManager.LoadScene(scene.name);
                         }
                     } 
+                } else {
+                    enemy.GetComponent<EnemyMovement>().setSpeedBack();
                 }
+
+            } else {
+                enemy.GetComponent<EnemyMovement>().setSpeedBack();
+
             }
+
+        }
+        if (testEnd == false){
+            endGame = 0;
         }
     }
 

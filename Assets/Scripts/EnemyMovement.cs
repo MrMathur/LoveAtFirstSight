@@ -7,7 +7,8 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private GameObject waypoints;
     [SerializeField] private bool followWaypoints;
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
+    private float initSpeed;
     [SerializeField] private float timeDelay;
     [SerializeField] private float distanceThreshold;
 
@@ -20,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         targets = new Transform[waypoints.GetComponentsInChildren<Transform>().GetLength(0)];
-
+        initSpeed = speed;
         int i = 0;
         foreach (Transform t in waypoints.GetComponentsInChildren<Transform>())
         {
@@ -32,6 +33,14 @@ public class EnemyMovement : MonoBehaviour
         currentTarget = targets[targetIndex];
 
         delayCondition = true;
+    }
+
+    public void setSpeedZero(){
+        speed =0;
+    }
+
+    public void setSpeedBack() {
+        speed = initSpeed;
     }
 
     // Update is called once per frame
