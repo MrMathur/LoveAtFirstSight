@@ -24,6 +24,9 @@ public class FieldOfView : MonoBehaviour
     private Vector3 origin;
     private float startingAngle;
 
+    private float initViewDistance;
+    private float initViewAngle;
+
     private GameObject player;
     private Animator player_animator;
     private PlayerMovement player_movementScript;
@@ -50,6 +53,22 @@ public class FieldOfView : MonoBehaviour
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         player_animator = player.GetComponent<Animator>();
         player_movementScript = player.GetComponent<PlayerMovement>();
+    }
+
+     public void setViewAngleBack(){
+        viewAngle = initViewAngle;
+    }
+
+    public void setViewAngle(float y){
+        viewAngle = y;
+    }
+
+     public void setViewDistanceBack(){
+        viewDistance = initViewDistance;
+    }
+
+    public void setViewDistance(float y){
+        viewDistance = y;
     }
 
     void Update() {

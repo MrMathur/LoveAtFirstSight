@@ -39,6 +39,10 @@ public class EnemyMovement : MonoBehaviour
         speed =0;
     }
 
+    public void setSpeed(float y) {
+        speed = y;
+    }
+
     public void setSpeedBack() {
         speed = initSpeed;
     }
