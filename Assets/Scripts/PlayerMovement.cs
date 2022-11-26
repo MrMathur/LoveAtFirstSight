@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     private Rigidbody2D player_rb;
 
+    private bool move_condition;
     private float move_x, move_y;
 
     private GameObject fieldOfView_go;
@@ -18,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
         move_x = 0f;
         move_y = 0f;
+
+        move_condition = false;
 
         fieldOfView_go = GameObject.FindGameObjectsWithTag("FieldOfView")[0];
         fieldOfView_script = fieldOfView_go.GetComponent<FieldOfView>();
@@ -31,8 +34,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate() {
-        player_rb.velocity = new Vector2(move_x, move_y);
+        if (Input.anyKey) {
+            player_rb.velocity = new Vector2(move_x, move_y);
+        } else {
+            player_rb.velocity = new Vector2(0, 0);
+        }
 
         fieldOfView_script.SetOrigin(new Vector2(transform.position.x, transform.position.y));
+    }
+
+    private void FlipCharacter() {
+
     }
 }
