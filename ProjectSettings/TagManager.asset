@@ -17,8 +17,8 @@ TagManager:
   - Water
   - UI
   - Obstacle
-  - Player
   - Enemy
+  - Player
   - Door
   - 
   - 
@@ -46,11 +46,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3291408447
-    locked: 0
   - name: Enemy
     uniqueID: 1018192809
+    locked: 0
+  - name: Player
+    uniqueID: 3291408447
     locked: 0
   - name: Door
     uniqueID: 2540845347
