@@ -135,6 +135,8 @@ MonoBehaviour:
   viewAngle: 0.5
   rayCount: 4
   zOffset: -1
+  timeToGameOver: 400
+  playerFOV: []
 --- !u!210 &4022315609881212323
 SortingGroup:
   m_ObjectHideFlags: 0
