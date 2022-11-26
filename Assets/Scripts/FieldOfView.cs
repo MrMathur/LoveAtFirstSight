@@ -26,6 +26,7 @@ public class FieldOfView : MonoBehaviour
 
     private GameObject player;
     private Animator player_animator;
+    private PlayerMovement player_movementScript;
 
     private Camera cam;
 
@@ -48,6 +49,7 @@ public class FieldOfView : MonoBehaviour
 
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         player_animator = player.GetComponent<Animator>();
+        player_movementScript = player.GetComponent<PlayerMovement>();
     }
 
     void Update() {
@@ -58,8 +60,10 @@ public class FieldOfView : MonoBehaviour
         float turnToMouseAngle = Mathf.Atan((playerToMouse.y) / (playerToMouse.x));
         if (playerToMouse.x < 0) {
             SetStartingAngle(turnToMouseAngle + (180) * Mathf.Deg2Rad);  
+            player_movementScript.FlipCharacter(false);
         } else {
-            SetStartingAngle(turnToMouseAngle);        
+            SetStartingAngle(turnToMouseAngle);     
+            player_movementScript.FlipCharacter(true);   
         }
     }
 
