@@ -13,9 +13,8 @@ public class FieldOfView : MonoBehaviour
     [SerializeField] private float zOffset;
 
     private GameObject[] enemies;
-
+    private float endGame;
     private LayerMask obstacleMask;
-
     private Vector3 origin;
     private float startingAngle;
 
@@ -31,7 +30,7 @@ public class FieldOfView : MonoBehaviour
         startingAngle = viewAngle / 2;
 
         obstacleMask = LayerMask.GetMask("Obstacle");
-
+        endGame = 0;
         cam = Camera.main;
 
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -95,8 +94,11 @@ public class FieldOfView : MonoBehaviour
                 if (enemyAngle < (viewAngle / 2)) {
                     RaycastHit2D hit = Physics2D.Raycast(origin, new Vector2(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y), viewDistance, obstacleMask);        
                     if (hit.collider == null) {
-                        Scene scene = SceneManager.GetActiveScene();
-                        SceneManager.LoadScene(scene.name);
+                        endGame++;
+                        if (endGame>1000) {
+                            Scene scene = SceneManager.GetActiveScene();
+                            SceneManager.LoadScene(scene.name);
+                        }
                     } 
                 }
             }
