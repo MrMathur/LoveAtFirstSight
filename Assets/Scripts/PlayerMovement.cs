@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed;
     private Rigidbody2D player_rb;
+    private float initSpeed;
 
     private float move_x, move_y;
 
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start() {
         player_rb = GetComponent<Rigidbody2D>();
-
+        initSpeed = speed;
         move_x = 0f;
         move_y = 0f;
 
@@ -32,6 +33,14 @@ public class PlayerMovement : MonoBehaviour
     {
         move_x = Input.GetAxis("Horizontal") * speed;
         move_y = Input.GetAxis("Vertical") * speed; 
+    }
+
+    public void setSpeedBack(){
+        speed = initSpeed;
+    }
+
+    public void setSpeed(float y){
+        speed = y;
     }
 
     void FixedUpdate() {

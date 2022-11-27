@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Door
   - EnemyWaypoints
+  - Pickup
+  - BlockDoor
   layers:
   - Default
   - TransparentFX
