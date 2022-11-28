@@ -14,6 +14,11 @@ public class PlayerMovement : MonoBehaviour
     private GameObject fieldOfView_go;
     private FieldOfView fieldOfView_script;
 
+    private Animator player_animator;
+
+    private bool isMoving;
+    private bool playerCanMove;
+
     private bool facingRight;
 
     private void Start() {
@@ -24,15 +29,13 @@ public class PlayerMovement : MonoBehaviour
 
         fieldOfView_go = GameObject.FindGameObjectsWithTag("FieldOfView")[0];
         fieldOfView_script = fieldOfView_go.GetComponent<FieldOfView>();
+        player_animator = GetComponent<Animator>();
 
         facingRight = true;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        move_x = Input.GetAxis("Horizontal") * speed;
-        move_y = Input.GetAxis("Vertical") * speed; 
+        isMoving = false;
+
+        playerCanMove = true;
     }
 
     public void setSpeedBack(){
@@ -44,12 +47,24 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate() {
+
+        if (Input.anyKey && playerCanMove) {
+            move_x = Input.GetAxis("Horizontal") * speed;
+            move_y = Input.GetAxis("Vertical") * speed; 
+
+            isMoving = (move_x != 0 || move_y != 0);
+        } else {
+            isMoving = false;
+        }
+
         // Move (if keydown)
-        if (Input.anyKey) {
+        if (isMoving) {
             player_rb.velocity = new Vector2(move_x, move_y);
         } else {
             player_rb.velocity = new Vector2(0, 0);
         }
+
+        player_animator.SetBool("isMoving", isMoving);
 
         // Update FieldOfView (Vision Cone)
         fieldOfView_script.SetOrigin(new Vector2(transform.position.x, transform.position.y));

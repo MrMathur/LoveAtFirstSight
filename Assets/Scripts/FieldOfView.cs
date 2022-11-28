@@ -57,10 +57,12 @@ public class FieldOfView : MonoBehaviour
 
      public void setViewAngleBack(){
         viewAngle = initViewAngle;
+        startingAngle = viewAngle / 2;
     }
 
     public void setViewAngle(float y){
         viewAngle = y;
+        startingAngle = viewAngle / 2;
     }
 
      public void setViewDistanceBack(){
@@ -84,9 +86,10 @@ public class FieldOfView : MonoBehaviour
             SetStartingAngle(turnToMouseAngle);     
             player_movementScript.FlipCharacter(true);   
         }
+
+        player_animator.SetBool("isLookingDown", (playerToMouse.y < 0));
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         // Draw FieldOfView
