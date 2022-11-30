@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isMoving;
     private bool playerCanMove;
-
     private bool facingRight;
 
     private void Start() {
@@ -49,8 +48,22 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
 
         if (Input.anyKey && playerCanMove) {
-            move_x = Input.GetAxis("Horizontal") * speed;
-            move_y = Input.GetAxis("Vertical") * speed; 
+            
+            if (Input.GetAxis("Vertical") > 0) {
+                move_y = speed;
+            } else if (Input.GetAxis("Vertical") < 0) {
+                move_y = -speed;
+            } else {
+                move_y = 0;
+            }
+
+            if (Input.GetAxis("Horizontal") > 0) {
+                move_x = speed;
+            } else if (Input.GetAxis("Horizontal") < 0) {
+                move_x = -speed;
+            } else {
+                move_x = 0;
+            }
 
             isMoving = (move_x != 0 || move_y != 0);
         } else {

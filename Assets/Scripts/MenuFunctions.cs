@@ -10,6 +10,12 @@ public class MenuFunctions : MonoBehaviour
     private int levelSelectIndex = 1;
     private int creditsIndex = 2;
     private int startIndex = 3;
+    
+    private GameObject env;
+
+    private void Start() {
+        env = GameObject.FindGameObjectsWithTag("Environment")[0];
+    }
 
     public void StartGame() {       
         SceneManager.LoadScene(startIndex, LoadSceneMode.Single);
@@ -30,5 +36,9 @@ public class MenuFunctions : MonoBehaviour
 
     public void LoadLevelSelectMenu() {
         SceneManager.LoadScene(levelSelectIndex, LoadSceneMode.Single);
+    }
+
+    public void ToggleMute() {
+        env.GetComponent<AudioSource>().mute = !env.GetComponent<AudioSource>().mute;
     }
 }
