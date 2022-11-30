@@ -14,7 +14,7 @@ public class MenuFunctions : MonoBehaviour
     private GameObject env;
 
     private void Start() {
-        env = GameObject.FindGameObjectsWithTag("Environment")[0];
+        // env = GameObject.FindGameObjectsWithTag("Environment")[0];
     }
 
     public void StartGame() {       
