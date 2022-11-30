@@ -7,8 +7,9 @@ public class MenuFunctions : MonoBehaviour
 {
 
     private int menuIndex = 0;
-    private int creditsIndex = 1;
-    private int startIndex = 2;
+    private int levelSelectIndex = 1;
+    private int creditsIndex = 2;
+    private int startIndex = 3;
 
     public void StartGame() {       
         SceneManager.LoadScene(startIndex, LoadSceneMode.Single);
@@ -25,5 +26,9 @@ public class MenuFunctions : MonoBehaviour
     public void RestartScene() {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+    }
+
+    public void LoadLevelSelectMenu() {
+        SceneManager.LoadScene(levelSelectIndex, LoadSceneMode.Single);
     }
 }
