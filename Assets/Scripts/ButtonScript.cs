@@ -13,14 +13,13 @@ public class ButtonScript : MonoBehaviour
     // private AudioSource keySound;
     void Start()
     {
-        doors = GameObject.FindGameObjectsWithTag("BlockDoor");
         musicSettings = GameObject.FindGameObjectsWithTag("Environment")[0].GetComponent<MusicSettings>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         // keySound.Play(0);
-
+        doors = GameObject.FindGameObjectsWithTag("BlockDoor");
         foreach (GameObject door in doors) {
             if (buttonId == door.GetComponent<DoorScript>().getDoorId()){
                 door.GetComponent<DoorScript>().destroyDoor();

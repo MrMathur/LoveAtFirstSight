@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8415189510818817788}
   m_Layer: 0
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,4 +244,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonId: 1
-  button: {fileID: 112568249564207591}
