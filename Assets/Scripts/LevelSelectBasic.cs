@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- using UnityEngine.UI;
+using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class LevelSelectBasic : MonoBehaviour
 {
@@ -24,6 +26,10 @@ public class LevelSelectBasic : MonoBehaviour
             }
             test+=1;
         }
+    }
+
+    public void selectLevel(int levelIndex) {
+        SceneManager.LoadScene(levelIndex);
     }
 
     // Update is called once per frame
