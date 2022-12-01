@@ -17,6 +17,9 @@ public class EnemyMovement : MonoBehaviour
     private int targetIndex;
     private bool delayCondition;
 
+    private Animator enemy_animator;
+    private bool isMoving;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,18 +36,27 @@ public class EnemyMovement : MonoBehaviour
         currentTarget = targets[targetIndex];
 
         delayCondition = true;
+
+        enemy_animator = GetComponent<Animator>();
+        isMoving = false;
     }
 
     public void setSpeedZero(){
-        speed =0;
+        speed = 0;
+        isMoving = false;
+        enemy_animator.SetBool("isMoving", isMoving && followWaypoints);
     }
 
     public void setSpeed(float y) {
         speed = y;
+        isMoving = true;
+        enemy_animator.SetBool("isMoving", isMoving && followWaypoints);
     }
 
     public void setSpeedBack() {
         speed = initSpeed;
+        isMoving = true;
+        enemy_animator.SetBool("isMoving", isMoving && followWaypoints);
     }
 
     // Update is called once per frame
@@ -56,11 +68,17 @@ public class EnemyMovement : MonoBehaviour
 
             if (distance < distanceThreshold) {
                 if (delayCondition) {
+                    isMoving = false;
+                    enemy_animator.SetBool("isMoving", isMoving && followWaypoints);
                     StartCoroutine(SetDelay());
                 }
             } else {
                 float step = speed * Time.deltaTime;
                 transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, step);
+                if (!isMoving) { 
+                    isMoving = true;
+                    enemy_animator.SetBool("isMoving", isMoving && followWaypoints);
+                }
             }
             
         }
