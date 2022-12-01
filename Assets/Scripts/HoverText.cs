@@ -9,18 +9,20 @@
  {
      [SerializeField] private TextMeshProUGUI txt;
      [SerializeField] private Button btn;
+     [SerializeField] private GameObject normalImage;
+     [SerializeField] private GameObject hoverImage;
  
      public Color normalColor;
      public Color pressedColor;
      public Color highlightedColor;
  
-     void Start()
-     {
-     }
- 
      private ButtonStatus lastButtonStatus = ButtonStatus.Normal;
      private bool isHighlightDesired = false;
      private bool isPressedDesired = false;
+
+     void Start() {
+        hoverImage.SetActive(false);
+     }
  
      void Update()
      {
@@ -37,12 +39,16 @@
              {
                  case ButtonStatus.Normal:
                      txt.color = normalColor;
+                     hoverImage.SetActive(false);
+                     normalImage.SetActive(true);
                      break;
                  case ButtonStatus.Pressed:
                      txt.color = pressedColor;
                      break;
                  case ButtonStatus.Highlighted:
                      txt.color = highlightedColor;
+                     hoverImage.SetActive(true);
+                     normalImage.SetActive(false);
                      break;
              }
          }
