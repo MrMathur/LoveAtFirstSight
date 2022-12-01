@@ -143,6 +143,7 @@ public class FieldOfView : MonoBehaviour
                 float enemyAngle = Vector3.Angle(playerToEnemyDirection, visionConeDirection) * Mathf.Deg2Rad;
                 if (enemyAngle < (viewAngle / 2)) {
                     enemy.GetComponent<EnemyMovement>().setSpeedZero();
+
                     RaycastHit2D hit = Physics2D.Raycast(origin, new Vector2(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y), viewDistance, obstacleMask);        
                     if (hit.collider == null) {
                         // endGame++;
@@ -166,6 +167,9 @@ public class FieldOfView : MonoBehaviour
         if (testEnd == false){
             player_animator.SetBool("EnemyWithinCone", false);
             // endGame = 0;
+            player.GetComponent<PlayerMovement>().setSpeedBack();
+        } else {
+            player.GetComponent<PlayerMovement>().setSpeed(0);
         }
     }
 
