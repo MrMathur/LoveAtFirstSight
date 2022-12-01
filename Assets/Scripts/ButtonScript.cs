@@ -8,11 +8,13 @@ public class ButtonScript : MonoBehaviour
 
     [SerializeField] private string buttonId;
     private GameObject[] doors;
+    private MusicSettings musicSettings;
+
     // private AudioSource keySound;
     void Start()
     {
         doors = GameObject.FindGameObjectsWithTag("BlockDoor");
-        // keySound = GetComponent<AudioSource>();
+        musicSettings = GameObject.FindGameObjectsWithTag("Environment")[0].GetComponent<MusicSettings>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -24,6 +26,8 @@ public class ButtonScript : MonoBehaviour
                 door.GetComponent<DoorScript>().destroyDoor();
             }
         }
+
+        musicSettings.PlayKeySound();
 
         Destroy(gameObject);
 
