@@ -7,29 +7,25 @@ public class ButtonScript : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private string buttonId;
-    [SerializeField] private GameObject button;
     private GameObject[] doors;
+    // private AudioSource keySound;
     void Start()
     {
         doors = GameObject.FindGameObjectsWithTag("BlockDoor");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // keySound = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        button.GetComponent<AudioSource>().Play(0);
+        // keySound.Play(0);
 
         foreach (GameObject door in doors) {
             if (buttonId == door.GetComponent<DoorScript>().getDoorId()){
                 door.GetComponent<DoorScript>().destroyDoor();
             }
         }
-        col.enabled = false;
+
+        Destroy(gameObject);
 
     }
 }
