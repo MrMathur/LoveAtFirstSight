@@ -76,7 +76,7 @@ public class FieldOfView : MonoBehaviour
     void Update() {
         // Change angle
         Vector3 mousePos = Input.mousePosition;
-        Vector3 point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 0));
+        Vector3 point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, zOffset));
         Vector3 playerToMouse = point - origin;
         float turnToMouseAngle = Mathf.Atan((playerToMouse.y) / (playerToMouse.x));
         if (playerToMouse.x < 0) {
@@ -94,7 +94,7 @@ public class FieldOfView : MonoBehaviour
     {
         // Draw FieldOfView
         float angle = startingAngle;
-        float deltaAngle = viewAngle / rayCount;
+        float deltaAngle = viewAngle / (rayCount - 1);
 
         int[] triangles = new int[(rayCount - 1) * 3];
         Vector3[] vertices = new Vector3[rayCount + 1];
