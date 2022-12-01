@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: {fileID: 112568250054521431}
-  followWaypoints: 1
+  followWaypoints: 0
   speed: 4
   timeDelay: 0.5
   distanceThreshold: 0.25
@@ -322,7 +322,7 @@ Animator:
   m_GameObject: {fileID: 8080835357367706871}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 775fce9216d7249f7926623ddcf009e8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6efaf3759b1ed439bbfb763e7f6292c7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

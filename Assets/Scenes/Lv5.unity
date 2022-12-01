@@ -808,6 +808,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2973636887931078629, guid: 2d7acada932584fc18469b1c4b09e8f9, type: 3}
+      propertyPath: startWithInstruction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5642171456024317809, guid: 2d7acada932584fc18469b1c4b09e8f9, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -902,7 +906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8859598179894152454, guid: 2d7acada932584fc18469b1c4b09e8f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6157517487949631856, guid: 2d7acada932584fc18469b1c4b09e8f9, type: 3}

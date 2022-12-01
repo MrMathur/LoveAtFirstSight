@@ -7,6 +7,7 @@ public class EndModal : MonoBehaviour
 
     private GameObject endModal;
     private MusicSettings musicSettings;
+    private bool heartBeating;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +17,17 @@ public class EndModal : MonoBehaviour
         endModal.SetActive(false);
 
         musicSettings = GameObject.FindGameObjectsWithTag("Environment")[0].GetComponent<MusicSettings>();
+
+        heartBeating = false;
     }
 
     public void GameOver() {
         endModal.SetActive(true);
         Time.timeScale = 0;
 
-        musicSettings.StartHeartBeat();
+        if (!heartBeating) {
+            musicSettings.StartHeartBeat();
+            heartBeating = true;
+        }
     }
 }
