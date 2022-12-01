@@ -243,6 +243,10 @@ PrefabInstance:
       propertyPath: followWaypoints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8080835357367706871, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
 --- !u!1001 &1001555063
@@ -393,6 +397,10 @@ PrefabInstance:
       propertyPath: followWaypoints
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8080835357367706871, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
 --- !u!1001 &1386015276
@@ -469,6 +477,10 @@ PrefabInstance:
     - target: {fileID: 112568250855032969, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_LocalPosition.y
       value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080835357367706871, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
@@ -559,6 +571,10 @@ PrefabInstance:
       propertyPath: followWaypoints
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8080835357367706871, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
 --- !u!1001 &1895380434
@@ -648,6 +664,10 @@ PrefabInstance:
       propertyPath: followWaypoints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8080835357367706871, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
 --- !u!1001 &2089669268
@@ -712,6 +732,10 @@ PrefabInstance:
     - target: {fileID: 6867458988535778523, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: followWaypoints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080835357367706871, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}

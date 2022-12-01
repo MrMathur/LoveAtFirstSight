@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 4022315609881212321}
   - component: {fileID: 4022315609881212334}
   - component: {fileID: 4022315609881212323}
-  - component: {fileID: 166234171}
   m_Layer: 7
   m_Name: FieldOfView
   m_TagString: FieldOfView
@@ -146,18 +145,6 @@ SortingGroup:
   m_SortingLayerID: -1003558849
   m_SortingLayer: 2
   m_SortingOrder: 1
---- !u!114 &166234171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4022315609881212332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb0d5d62677ff40b9b29a4c57a66fe19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4022315610125841596
 GameObject:
   m_ObjectHideFlags: 0

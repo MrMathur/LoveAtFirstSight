@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 9684
+  controlID: 23951
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 9685
+  controlID: 23952
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 8096}
   vertical: 0
-  controlID: 9686
+  controlID: 23953
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2466ffffda6cffffe86dfffff86dffff0c6effff1c6effff5a6effff7e6effff806effff44a0ffff74a0ffffcaa0ffff08a5ffff9ea5ffffaaa5ffff02a6ffff08a7ffff0aa7ffffb6aeffffeeafffff
+      m_ExpandedIDs: 581affff3251fffffe64ffff2466ffffda6cffff706dffffd46dffffe86dfffff86dffff0c6effff1c6effff5a6effff7e6effff806effff44a0ffff74a0ffffcaa0ffff08a5ffff9ea5ffffaaa5ffff02a6ffff08a7ffff0aa7ffffb6aeffffeeafffff0412010082120100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -559,9 +559,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.9887457, y: 2.2425463, z: -0.4059285}
+    m_Target: {x: 446.94574, y: 263.62274, z: -11.141163}
     speed: 2
-    m_Value: {x: 0.9887457, y: 2.2425463, z: -0.4059285}
+    m_Value: {x: 446.94574, y: 263.62274, z: -11.141163}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,9 +612,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 18.724655
+    m_Target: 1923.1819
     speed: 2
-    m_Value: 18.724655
+    m_Value: 1923.1819
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -724,7 +724,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -22780
+  m_LastSelectedObjectID: -58834
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -761,14 +761,14 @@ MonoBehaviour:
     - {fileID: -770730798365706327, guid: b6978d0eb9e8b4e958cb480f24e77ce6, type: 2}
     - {fileID: 3019363105779328272, guid: c18fcea4417bc43ca8cd87fa6d4d3c99, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.892029
+    - e00: 0.76884055
       e01: 0
       e02: 0
-      e03: -29.60144
+      e03: -23.441986
       e10: 0
-      e11: 0.892029
+      e11: 0.76884055
       e12: 0
-      e13: 210
+      e13: 252.5
       e20: 0
       e21: 0
       e22: 1
@@ -842,9 +842,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: c18fcea4417bc43ca8cd87fa6d4d3c99, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: bacf8dcf2e0594a6db6a9c7d12168cef, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 3019363105779328272, guid: c18fcea4417bc43ca8cd87fa6d4d3c99, type: 2}
+  - m_Target: {fileID: -770730798365706327, guid: bacf8dcf2e0594a6db6a9c7d12168cef, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -979,14 +979,14 @@ MonoBehaviour:
     y: 1095.5
     width: 2738
     height: 501.5
-  m_MinSize: {x: 230, y: 271}
-  m_MaxSize: {x: 10000, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 100, y: 121}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1028,21 +1028,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: 96
   m_LastProjectPath: "/Users/arpitmathur/Desktop/Cliche\u0300/LoveAtFirstSight/LoveAtFirstSight"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b8ce0000
-    m_LastClickedID: 52920
+    m_SelectedIDs: bcce0000
+    m_LastClickedID: 52924
     m_ExpandedIDs: 00000000b2ce000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0

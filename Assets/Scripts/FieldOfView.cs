@@ -11,16 +11,13 @@ public class FieldOfView : MonoBehaviour
     [SerializeField] private float viewAngle;
     [SerializeField] private int rayCount;
     [SerializeField] private float zOffset;
-    // [SerializeField] private float timeToGameOver;
+    
     private bool testEnd;
-    // public GameObject[] playerFOV;
-
-    // Color startCol;
-    // Color endCol;
 
     private GameObject[] enemies;
-    // private float endGame;
+    
     private LayerMask obstacleMask;
+
     private Vector3 origin;
     private float startingAngle;
 
@@ -31,6 +28,8 @@ public class FieldOfView : MonoBehaviour
     private Animator player_animator;
     private Animator enemy_animator;
     private PlayerMovement player_movementScript;
+
+    private List<GameObject> enemiesHit;
 
     private Camera cam;
 
@@ -52,6 +51,8 @@ public class FieldOfView : MonoBehaviour
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         player_animator = player.GetComponent<Animator>();
         player_movementScript = player.GetComponent<PlayerMovement>();
+
+        enemiesHit = new List<GameObject>();
     }
 
      public void setViewAngleBack(){
@@ -95,6 +96,8 @@ public class FieldOfView : MonoBehaviour
         float angle = startingAngle;
         float deltaAngle = viewAngle / (rayCount - 1);
 
+        testEnd = false;
+
         int[] triangles = new int[(rayCount - 1) * 3];
         Vector3[] vertices = new Vector3[rayCount + 1];
         Vector2[] uv = new Vector2[rayCount + 1];
@@ -110,7 +113,15 @@ public class FieldOfView : MonoBehaviour
                 vertices[i] = new Vector3(direction.x + origin.x, direction.y + origin.y, origin.z);
             } else {
                 vertices[i] = new Vector3(hit.point.x, hit.point.y, origin.z);
+
+                if (hit.collider.tag == "Enemy") {
+                    testEnd = true;
+
+                    enemiesHit.Add(hit.collider.gameObject);
+                }
             }
+
+            
 
             angle -= deltaAngle;
 
@@ -125,50 +136,29 @@ public class FieldOfView : MonoBehaviour
         mesh.triangles = triangles;
         mesh.uv = uv;
 
-        // Look for Enemies
-        testEnd = false;
+        // Drawing Complete
 
-        foreach (GameObject enemy in enemies) {
-            float enemyDistance = Vector3.Distance(origin, enemy.transform.position);
-            if (enemyDistance < viewDistance) {
-                Vector3 visionConeDirection = new Vector3(Mathf.Cos(startingAngle - viewAngle/2), Mathf.Sin(startingAngle - viewAngle/2), 0);
-                Vector3 playerToEnemyDirection = new Vector3(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y, 0);
-                float enemyAngle = Vector3.Angle(playerToEnemyDirection, visionConeDirection) * Mathf.Deg2Rad;
+        if (testEnd) {
+            player_movementScript.setSpeed(0);
 
-                if (enemyAngle < (viewAngle / 2)) {
-                    Animator enemy_animator = enemy.GetComponent<Animator>();
-                    enemy.GetComponent<EnemyMovement>().setSpeedZero();
-                    player_animator.SetBool("EnemyWithinCone", false);
+            foreach(GameObject enemy in enemiesHit) {
+                enemy.GetComponent<EnemyMovement>().setSpeedZero();
+                enemy.GetComponent<Animator>().SetBool("isInCone", true);
+            }
 
+            player_animator.SetBool("EnemyWithinCone", true);
 
-                    RaycastHit2D hit = Physics2D.Raycast(origin, new Vector2(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y), viewDistance, obstacleMask);        
-                    if (hit.collider == null) {
-                        testEnd = true;
-                        player_animator.SetBool("EnemyWithinCone", true);
-                        enemy_animator.SetBool("isInCone", true);
+        } else {
+            player_movementScript.setSpeedBack();
 
-                    } 
-                } else {
-                    enemy.GetComponent<EnemyMovement>().setSpeedBack();
-                    enemy.GetComponent<Animator>().SetBool("isInCone", false);
-
-                }
-
-            } else {
+            foreach(GameObject enemy in enemiesHit) {
                 enemy.GetComponent<EnemyMovement>().setSpeedBack();
                 enemy.GetComponent<Animator>().SetBool("isInCone", false);
             }
 
-        }
-        if (testEnd == false){
             player_animator.SetBool("EnemyWithinCone", false);
-            // endGame = 0;
-            player.GetComponent<AudioSource>().Stop();
-            player.GetComponent<PlayerMovement>().setSpeedBack();
-        } else {
-            player.GetComponent<PlayerMovement>().setSpeed(0);
-            player.GetComponent<AudioSource>().Play(0);
 
+            enemiesHit.Clear();
         }
     }
 
