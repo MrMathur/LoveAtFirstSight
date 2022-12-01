@@ -12,6 +12,7 @@ TagManager:
   - Pickup
   - BlockDoor
   - Environment
+  - Modal
   layers:
   - Default
   - TransparentFX

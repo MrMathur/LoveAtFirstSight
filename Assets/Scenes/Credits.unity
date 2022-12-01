@@ -646,7 +646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Can you avoid love at first sight?
+  m_text: Special Thanks to Kenney's Assets for Tilemaps!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8c558f31fa4ce422e8a6fb784f0dbf62, type: 2}
   m_sharedMaterial: {fileID: 1323309839713174690, guid: 8c558f31fa4ce422e8a6fb784f0dbf62, type: 2}
@@ -20265,8 +20265,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: THANK YOU FOR PLAYING
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8c558f31fa4ce422e8a6fb784f0dbf62, type: 2}
-  m_sharedMaterial: {fileID: 1323309839713174690, guid: 8c558f31fa4ce422e8a6fb784f0dbf62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0a49c9f89914a4c58b104d8eb89cfd8f, type: 2}
+  m_sharedMaterial: {fileID: -2062238318627443066, guid: 0a49c9f89914a4c58b104d8eb89cfd8f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20353,7 +20353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!1 &1631200047
 GameObject:

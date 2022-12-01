@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4022315609065841569, guid: e10a0af1b374e4576a956584701dd879, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4022315609881212334, guid: e10a0af1b374e4576a956584701dd879, type: 3}
       propertyPath: rayCount
       value: 100
@@ -238,6 +242,10 @@ PrefabInstance:
     - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6867458988535778523, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: followWaypoints
@@ -300,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6076885158609156302, guid: 7ca51cfd318d348f7a7a7c809d20ef3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca51cfd318d348f7a7a7c809d20ef3c, type: 3}
 --- !u!1001 &1298575531
@@ -356,6 +368,10 @@ PrefabInstance:
     - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_Name
       value: Enemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112568249639743474, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_IsActive
@@ -442,6 +458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 112568249639743474, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -514,6 +534,10 @@ PrefabInstance:
     - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_Name
       value: Enemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112568249639743474, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_IsActive
@@ -600,6 +624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 112568249639743474, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -684,6 +712,10 @@ PrefabInstance:
     - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112568249564207591, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6867458988535778523, guid: e49e4f9776a2b47099f35073be9d69b1, type: 3}
       propertyPath: followWaypoints
@@ -912,6 +944,10 @@ PrefabInstance:
     - target: {fileID: 9087334126184577140, guid: 01c84bfe7301143a088d4fe4a35f5ce5, type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087334126184577142, guid: 01c84bfe7301143a088d4fe4a35f5ce5, type: 3}
+      propertyPath: startPaused
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9087334126184577143, guid: 01c84bfe7301143a088d4fe4a35f5ce5, type: 3}
       propertyPath: m_RootOrder
