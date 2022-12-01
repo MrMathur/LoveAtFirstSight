@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewDistance: 7
   viewAngle: 0.75
-  rayCount: 4
+  rayCount: 20
   zOffset: -1
 --- !u!210 &4022315609881212323
 SortingGroup:

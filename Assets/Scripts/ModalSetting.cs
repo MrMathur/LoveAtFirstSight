@@ -36,5 +36,6 @@ public class ModalSetting : MonoBehaviour
     public void RestartScene() {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        Time.timeScale=1;
     }
 }
