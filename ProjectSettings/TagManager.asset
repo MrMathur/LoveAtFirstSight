@@ -15,6 +15,7 @@ TagManager:
   - Modal
   - EndModal
   - ui_canvas
+  - Key
   layers:
   - Default
   - TransparentFX
