@@ -12,8 +12,8 @@ public class Pickup : MonoBehaviour
 
     private FieldOfView fieldOfView_script;
 
-    private AudioSource keySound;
     private Animator player_animator;
+    private MusicSettings musicSettings;
 
 
     // Start is called before the first frame update
@@ -23,13 +23,12 @@ public class Pickup : MonoBehaviour
         fieldOfView_go = GameObject.FindGameObjectsWithTag("FieldOfView")[0];
         fieldOfView_script = fieldOfView_go.GetComponent<FieldOfView>();    
 
-        keySound = GetComponent<AudioSource>();
         player_animator = player.GetComponent<Animator>();
+        musicSettings = GameObject.FindGameObjectsWithTag("Environment")[0].GetComponent<MusicSettings>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        keySound.Play(0);
 
         if (editedViewAngle != 0) {
             fieldOfView_script.setViewAngle(editedViewAngle);
@@ -39,6 +38,8 @@ public class Pickup : MonoBehaviour
         }
 
         player_animator.SetBool("hasShades", true);
+
+        musicSettings.PlayKeySound();
         
         Destroy(gameObject);
     }
