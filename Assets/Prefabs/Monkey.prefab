@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112568249564207588}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Monkey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ SpriteRenderer:
   m_SortingLayerID: 1018192809
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a1a25240342348ac993f0ba99f70e7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e50d2acfa2c5e45a7aa91d96196dc372, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -322,7 +322,7 @@ Animator:
   m_GameObject: {fileID: 8080835357367706871}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bacf8dcf2e0594a6db6a9c7d12168cef, type: 2}
+  m_Controller: {fileID: 9100000, guid: 775fce9216d7249f7926623ddcf009e8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
