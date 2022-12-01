@@ -22,6 +22,8 @@ public class ButtonScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        button.GetComponent<AudioSource>().Play(0);
+
         foreach (GameObject door in doors) {
             if (buttonId == door.GetComponent<DoorScript>().getDoorId()){
                 door.GetComponent<DoorScript>().destroyDoor();

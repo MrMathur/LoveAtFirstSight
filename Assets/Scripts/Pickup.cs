@@ -32,6 +32,8 @@ public class Pickup : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
+        current.GetComponent<AudioSource>().Play(0);
+
         if (editedViewAngle != 0) {
             fieldOfView_script.setViewAngle(editedViewAngle);
         }

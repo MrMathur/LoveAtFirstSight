@@ -155,6 +155,7 @@ public class FieldOfView : MonoBehaviour
                         testEnd = true;
                         player_animator.SetBool("EnemyWithinCone", true);
                         enemy_animator.SetBool("isInCone", true);
+
                         // if (endGame>timeToGameOver) {
                         //     enemy.GetComponent<EnemyMovement>().setSpeedBack();
                         //     Scene scene = SceneManager.GetActiveScene();
@@ -164,6 +165,7 @@ public class FieldOfView : MonoBehaviour
                 } else {
                     enemy.GetComponent<EnemyMovement>().setSpeedBack();
                     enemy.GetComponent<Animator>().SetBool("isInCone", false);
+
                 }
 
             } else {
@@ -175,9 +177,12 @@ public class FieldOfView : MonoBehaviour
         if (testEnd == false){
             player_animator.SetBool("EnemyWithinCone", false);
             // endGame = 0;
+            player.GetComponent<AudioSource>().Pause();
             player.GetComponent<PlayerMovement>().setSpeedBack();
         } else {
             player.GetComponent<PlayerMovement>().setSpeed(0);
+            player.GetComponent<AudioSource>().Play(0);
+
         }
     }
 
