@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 17248
+  controlID: 29339
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 17249
+  controlID: 29340
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 8096}
   vertical: 0
-  controlID: 17250
+  controlID: 29341
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f6acffff3aadffff4cadffff50aeffffe4aeffffe0b0ffff1ab3ffffc0b4ffff08cbffffdae0ffffece0fffff0e1ffff3cf4ffff2cfbffff82b000004ac40000ecc70000
+      m_ExpandedIDs: 3aadffff50aeffffe4aeffffe0b0ffff1ab3ffffc0b4ffff08cbffffdae0ffffece0fffff0e1ffff3cf4ffff2cfbffff82b000004ac40000ecc70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -346,7 +346,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       id: unity-search-toolbar
       index: 1
@@ -390,7 +390,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Light Settings
       index: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Cloth Constraints
       index: 2
@@ -423,7 +423,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Cloth Collisions
       index: 3
@@ -434,7 +434,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Navmesh Display
       index: 4
@@ -445,7 +445,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Agent Display
       index: 5
@@ -456,7 +456,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Obstacle Display
       index: 6
@@ -467,7 +467,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Occlusion Culling
       index: 7
@@ -478,7 +478,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Physics Debugger
       index: 8
@@ -489,7 +489,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Scene Visibility
       index: 9
@@ -500,7 +500,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
       index: 10
@@ -559,9 +559,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 831.953, y: 617.5136, z: 0.059659004}
+    m_Target: {x: 872.12024, y: 538.23706, z: -0.5074482}
     speed: 2
-    m_Value: {x: 831.953, y: 617.5136, z: 0.059659004}
+    m_Value: {x: 872.12024, y: 538.23706, z: -0.5074482}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,9 +612,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 878.9802
+    m_Target: 935.6949
     speed: 2
-    m_Value: 878.9802
+    m_Value: 935.6949
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AnimatorControllerTool
+  m_Name: AnimationWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -688,12 +688,12 @@ MonoBehaviour:
     height: 1095.5
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -759,6 +759,8 @@ MonoBehaviour:
     - {fileID: -770730798365706327, guid: 8ca14b11f3eac475d9a968b1fd413c3d, type: 2}
     - {fileID: -770730798365706327, guid: 775fce9216d7249f7926623ddcf009e8, type: 2}
     - {fileID: -770730798365706327, guid: b6978d0eb9e8b4e958cb480f24e77ce6, type: 2}
+    - {fileID: 3530535168599376199, guid: 2da8b3fe9c3c148d2841578559f76df5, type: 2}
+    - {fileID: 3019363105779328272, guid: c18fcea4417bc43ca8cd87fa6d4d3c99, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.53105396
       e01: 0
@@ -824,10 +826,42 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 0.64789474
+      e01: 0
+      e02: 0
+      e03: -17.394745
+      e10: 0
+      e11: 0.64789474
+      e12: 0
+      e13: 456.20004
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.691573
+      e01: 0
+      e02: 0
+      e03: 125.65169
+      e10: 0
+      e11: 0.691573
+      e12: 0
+      e13: 510.83426
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: bacf8dcf2e0594a6db6a9c7d12168cef, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: c18fcea4417bc43ca8cd87fa6d4d3c99, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -770730798365706327, guid: bacf8dcf2e0594a6db6a9c7d12168cef, type: 2}
+  - m_Target: {fileID: 3019363105779328272, guid: c18fcea4417bc43ca8cd87fa6d4d3c99, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -897,7 +931,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 421
+    m_CachedPref: 174
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -975,21 +1009,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 96
   m_LastProjectPath: "/Users/arpitmathur/Desktop/Cliche\u0300/LoveAtFirstSight/LoveAtFirstSight"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e630000
-    m_LastClickedID: 25374
+    m_SelectedIDs: 3e630000
+    m_LastClickedID: 25406
     m_ExpandedIDs: 000000001e63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1043,9 +1077,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: ae530100
+    m_LastClickedInstanceID: 86958
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000867c0000067e000024720000a2600000a66000004ab3000052b300004eb3000056b300007ab3000072b3000082b300006ab3000076b3000086b300007eb300006eb3000046760000f69c00005088000034b300003cb3000038b30000acb30000b0b30000a4b30000a8b3000094b3000098b3000090b30000d4b30000c4b30000d0b30000ccb30000e0b30000c8b30000d8b30000dcb30000f2b30000eab30000eeb30000feb300000ab4000002b4000006b40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
