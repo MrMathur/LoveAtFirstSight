@@ -142,9 +142,10 @@ public class FieldOfView : MonoBehaviour
                 Vector3 visionConeDirection = new Vector3(Mathf.Cos(startingAngle - viewAngle/2), Mathf.Sin(startingAngle - viewAngle/2), 0);
                 Vector3 playerToEnemyDirection = new Vector3(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y, 0);
                 float enemyAngle = Vector3.Angle(playerToEnemyDirection, visionConeDirection) * Mathf.Deg2Rad;
+
                 if (enemyAngle < (viewAngle / 2)) {
+                    Animator enemy_animator = enemy.GetComponent<Animator>();
                     enemy.GetComponent<EnemyMovement>().setSpeedZero();
-                    enemy.GetComponent<Animator>().SetBool("isInCone", true);
                     player_animator.SetBool("EnemyWithinCone", false);
 
 
@@ -153,6 +154,7 @@ public class FieldOfView : MonoBehaviour
                         // endGame++;
                         testEnd = true;
                         player_animator.SetBool("EnemyWithinCone", true);
+                        enemy_animator.SetBool("isInCone", true);
                         // if (endGame>timeToGameOver) {
                         //     enemy.GetComponent<EnemyMovement>().setSpeedBack();
                         //     Scene scene = SceneManager.GetActiveScene();
@@ -162,13 +164,11 @@ public class FieldOfView : MonoBehaviour
                 } else {
                     enemy.GetComponent<EnemyMovement>().setSpeedBack();
                     enemy.GetComponent<Animator>().SetBool("isInCone", false);
-
                 }
 
             } else {
                 enemy.GetComponent<EnemyMovement>().setSpeedBack();
                 enemy.GetComponent<Animator>().SetBool("isInCone", false);
-
             }
 
         }
