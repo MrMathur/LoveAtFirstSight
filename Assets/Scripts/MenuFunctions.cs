@@ -8,13 +8,15 @@ public class MenuFunctions : MonoBehaviour
 
     private int menuIndex = 0;
     private int levelSelectIndex = 1;
-    private int creditsIndex = 2;
-    private int startIndex = 3;
+    private int startIndex = 2;
+    private int creditsIndex;
     
     private GameObject env;
 
     private void Start() {
         env = GameObject.FindGameObjectsWithTag("Environment")[0];
+        creditsIndex = SceneManager.sceneCountInBuildSettings-1;
+
     }
 
     public void StartGame() {       
