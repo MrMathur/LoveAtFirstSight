@@ -12,7 +12,6 @@
 
 /[Pp]ackages/packages-lock.json
 /[Pp]rojectSettings/[Pp]rojectVersion.txt
- serSettings/EditorUserSettings.asset
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
