@@ -451,6 +451,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 1930075757}
   btn: {fileID: 316035033}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -675,9 +677,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 1545874599}
   btn: {fileID: 360874346}
-  normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
+  normalColor: {r: 0, g: 0, b: 0, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightedColor: {r: 1, g: 0.078431375, b: 0.078431375, a: 1}
+  highlightedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
 --- !u!1 &393211665
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +926,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 1884138453}
   btn: {fileID: 507610463}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1131,6 +1137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 848405135}
   btn: {fileID: 552086193}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1299,6 +1307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 2069740878}
   btn: {fileID: 592999103}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1910,6 +1920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 1025595916}
   btn: {fileID: 703046233}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2213,6 +2225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 735309116}
   btn: {fileID: 742752097}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2381,6 +2395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 2047784155}
   btn: {fileID: 808572608}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2819,6 +2835,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 393211667}
   btn: {fileID: 937919230}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3257,6 +3275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 688352659}
   btn: {fileID: 1030137822}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3470,6 +3490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 674763019}
   btn: {fileID: 1278269616}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3961,6 +3983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 1366900596}
   btn: {fileID: 1357972873}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4399,6 +4423,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 1694468252}
   btn: {fileID: 1665633535}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4567,6 +4593,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 1006339346}
   btn: {fileID: 1678046936}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4870,6 +4898,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 919467989}
   btn: {fileID: 1756416583}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -20686,6 +20716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 310966662}
   btn: {fileID: 1966882246}
+  normalImage: {fileID: 0}
+  hoverImage: {fileID: 0}
   normalColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   pressedColor: {r: 0, g: 0, b: 0, a: 0}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
