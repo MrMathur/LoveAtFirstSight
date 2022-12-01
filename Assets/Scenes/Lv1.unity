@@ -178,14 +178,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4022315609065841569, guid: e10a0af1b374e4576a956584701dd879, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4022315609881212334, guid: e10a0af1b374e4576a956584701dd879, type: 3}
-      propertyPath: rayCount
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e10a0af1b374e4576a956584701dd879, type: 3}
 --- !u!1001 &715520907
@@ -818,7 +810,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6157517487949631856, guid: 2d7acada932584fc18469b1c4b09e8f9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d7acada932584fc18469b1c4b09e8f9, type: 3}
 --- !u!1001 &6414862186747924965
 PrefabInstance:
@@ -944,6 +937,10 @@ PrefabInstance:
     - target: {fileID: 9087334126184577140, guid: 01c84bfe7301143a088d4fe4a35f5ce5, type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087334126184577142, guid: 01c84bfe7301143a088d4fe4a35f5ce5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9087334126184577142, guid: 01c84bfe7301143a088d4fe4a35f5ce5, type: 3}
       propertyPath: startPaused

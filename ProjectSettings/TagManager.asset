@@ -13,6 +13,8 @@ TagManager:
   - BlockDoor
   - Environment
   - Modal
+  - EndModal
+  - ui_canvas
   layers:
   - Default
   - TransparentFX

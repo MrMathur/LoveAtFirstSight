@@ -37,8 +37,6 @@ public class FieldOfView : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // startCol = new Color(141/255, 197/255, 120/255, 1.0f);
-        // endCol = new Color(255/255, 204/255, 213/255, 1.0f);
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
 
@@ -129,12 +127,6 @@ public class FieldOfView : MonoBehaviour
 
         // Look for Enemies
         testEnd = false;
-        // var lerpedColor = Color.Lerp(Color.green, Color.red, endGame/timeToGameOver);
-        // playerFOV = GameObject.FindGameObjectsWithTag("FieldOfView");
-        // var FOVRenderer = playerFOV[0].GetComponent<Renderer>();
-
-       // Call SetColor using the shader property name "_Color" and setting the color to red
-        // FOVRenderer.material.SetColor("_Color", lerpedColor);
 
         foreach (GameObject enemy in enemies) {
             float enemyDistance = Vector3.Distance(origin, enemy.transform.position);
@@ -151,16 +143,10 @@ public class FieldOfView : MonoBehaviour
 
                     RaycastHit2D hit = Physics2D.Raycast(origin, new Vector2(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y), viewDistance, obstacleMask);        
                     if (hit.collider == null) {
-                        // endGame++;
                         testEnd = true;
                         player_animator.SetBool("EnemyWithinCone", true);
                         enemy_animator.SetBool("isInCone", true);
 
-                        // if (endGame>timeToGameOver) {
-                        //     enemy.GetComponent<EnemyMovement>().setSpeedBack();
-                        //     Scene scene = SceneManager.GetActiveScene();
-                        //     SceneManager.LoadScene(scene.name);
-                        // }
                     } 
                 } else {
                     enemy.GetComponent<EnemyMovement>().setSpeedBack();
