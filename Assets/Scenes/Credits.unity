@@ -19825,7 +19825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Aneesh
+  m_text: Anish
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8c558f31fa4ce422e8a6fb784f0dbf62, type: 2}
   m_sharedMaterial: {fileID: 1323309839713174690, guid: 8c558f31fa4ce422e8a6fb784f0dbf62, type: 2}
@@ -19914,7 +19914,7 @@ GameObject:
   - component: {fileID: 1162343062}
   - component: {fileID: 1162343061}
   m_Layer: 5
-  m_Name: Aneesh
+  m_Name: Anish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

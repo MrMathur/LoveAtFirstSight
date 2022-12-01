@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        targets = new Transform[waypoints.GetComponentsInChildren<Transform>().GetLength(0)];
+        targets = new Transform[waypoints.GetComponentsInChildren<Transform>().GetLength(0) - 1];
         initSpeed = speed;
         int i = 0;
         foreach (Transform t in waypoints.GetComponentsInChildren<Transform>())
