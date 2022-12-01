@@ -29,6 +29,7 @@ public class FieldOfView : MonoBehaviour
 
     private GameObject player;
     private Animator player_animator;
+    private Animator enemy_animator;
     private PlayerMovement player_movementScript;
 
     private Camera cam;
@@ -143,6 +144,9 @@ public class FieldOfView : MonoBehaviour
                 float enemyAngle = Vector3.Angle(playerToEnemyDirection, visionConeDirection) * Mathf.Deg2Rad;
                 if (enemyAngle < (viewAngle / 2)) {
                     enemy.GetComponent<EnemyMovement>().setSpeedZero();
+                    enemy.GetComponent<Animator>().SetBool("isInCone", true);
+                    player_animator.SetBool("EnemyWithinCone", false);
+
 
                     RaycastHit2D hit = Physics2D.Raycast(origin, new Vector2(enemy.transform.position.x - origin.x, enemy.transform.position.y - origin.y), viewDistance, obstacleMask);        
                     if (hit.collider == null) {
@@ -157,10 +161,14 @@ public class FieldOfView : MonoBehaviour
                     } 
                 } else {
                     enemy.GetComponent<EnemyMovement>().setSpeedBack();
+                    enemy.GetComponent<Animator>().SetBool("isInCone", false);
+
                 }
 
             } else {
                 enemy.GetComponent<EnemyMovement>().setSpeedBack();
+                enemy.GetComponent<Animator>().SetBool("isInCone", false);
+
             }
 
         }
