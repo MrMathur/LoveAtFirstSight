@@ -17,6 +17,6 @@ public class EndModal : MonoBehaviour
 
     public void GameOver() {
         endModal.SetActive(true);
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 }

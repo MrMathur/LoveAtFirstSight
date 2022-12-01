@@ -28,7 +28,10 @@ public class EnemyMovement : MonoBehaviour
         int i = 0;
         foreach (Transform t in waypoints.GetComponentsInChildren<Transform>())
         {
-            targets[i] = t;
+            if (i != 0) {
+                targets[i - 1] = t;
+            }
+
             i++;
         }
 
