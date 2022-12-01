@@ -177,7 +177,7 @@ public class FieldOfView : MonoBehaviour
         if (testEnd == false){
             player_animator.SetBool("EnemyWithinCone", false);
             // endGame = 0;
-            player.GetComponent<AudioSource>().Pause();
+            player.GetComponent<AudioSource>().Stop();
             player.GetComponent<PlayerMovement>().setSpeedBack();
         } else {
             player.GetComponent<PlayerMovement>().setSpeed(0);
