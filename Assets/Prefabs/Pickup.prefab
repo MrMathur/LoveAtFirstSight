@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 8080835357367706871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 112568249564207588}
@@ -108,7 +108,7 @@ SpriteRenderer:
   m_SortingLayerID: 1018192809
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a2e6a6cec308e42e1aa0756551092976, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b05f8cba9031496786f35668c1e399d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +116,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3381641420552411371
@@ -131,10 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac864eacedac4842ad915904dedcb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  editedPlayerSpeed: 20
+  editedPlayerSpeed: 0
   editedEnemySpeed: 0
-  editedViewAngle: 3
-  editedViewDistance: 0
+  editedViewAngle: 0.33
+  editedViewDistance: 3
   current: {fileID: 112568249564207591}
 --- !u!70 &1921422441165852010
 CapsuleCollider2D:
@@ -150,7 +150,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 1, y: 1}
   m_Direction: 0
 --- !u!82 &3363969154185881867
 AudioSource:
@@ -163,7 +163,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c36042b9be0da44f2829295300a09ce5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
