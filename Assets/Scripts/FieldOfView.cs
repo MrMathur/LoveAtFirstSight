@@ -32,6 +32,9 @@ public class FieldOfView : MonoBehaviour
     private List<GameObject> enemiesHit;
 
     private Camera cam;
+    private MusicSettings musicSettings;
+
+    private bool bubbleSoundPlaying;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +56,8 @@ public class FieldOfView : MonoBehaviour
         player_movementScript = player.GetComponent<PlayerMovement>();
 
         enemiesHit = new List<GameObject>();
+
+        musicSettings = GameObject.FindGameObjectsWithTag("Environment")[0].GetComponent<MusicSettings>();
     }
 
      public void setViewAngleBack(){
@@ -148,6 +153,11 @@ public class FieldOfView : MonoBehaviour
 
             player_animator.SetBool("EnemyWithinCone", true);
 
+            if (!bubbleSoundPlaying) {
+                bubbleSoundPlaying = true;
+                musicSettings.StartBubbleSound();
+            }            
+
         } else {
             player_movementScript.setSpeedBack();
 
@@ -159,6 +169,9 @@ public class FieldOfView : MonoBehaviour
             player_animator.SetBool("EnemyWithinCone", false);
 
             enemiesHit.Clear();
+
+            bubbleSoundPlaying = false;
+            musicSettings.StopBubbleSound();
         }
     }
 
