@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: {fileID: 112568250054521431}
-  followWaypoints: 0
+  followWaypoints: 1
   speed: 4
   timeDelay: 0.5
   distanceThreshold: 0.25
